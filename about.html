@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!---------- Required meta tag -------->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---------- Bootstrap CSS ----------->
+    <title>iCoding</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <!---------- Navigation Bar ---------->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">iCoding</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Category
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <!-------------dropdown divider line---------------------->
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <!----------------------- Registration--------------------------->
+                <div class="btn-group mx-2" role="group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        My Account
+                    </button>
+                    <ul class="dropdown-menu .bg-info">
+                        <li><a class="btn btn-success dropdown-toggle col-md-11" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" href="#">Login</a></li>
+                        <li><a class="btn btn-success dropdown-toggle col-md-11" data-bs-toggle="modal"
+                                data-bs-target="#signupModal" href="#">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-------------------- Login Modal--------------------->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3 mb-2 bg-warning-subtle text-emphasis-warning">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login to iCoding</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="get" action="index.html">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="name@gmail.com">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="********">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary d-grid gap-2 col-10 mx-auto">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <lable class="show_msg">Don't have an account?</lable>
+                    <a class="btn btn-success dropdown-toggle" data-bs-toggle="modal" data-bs-target="#signupModal"
+                        href="#">Sign
+                        Up</a>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------- Sign Up Modal--------------------->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3 mb-2 bg-danger text-white">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Get a iCoding Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="get" action="index.html">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name"
+                                    aria-label="First name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="name@gmail.com">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="********">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1"
+                                placeholder="********">
+                        </div>
+                        <button type="submit" class="btn btn-primary d-grid gap-2 col-10 mx-auto" >Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <lable class="show_msg">Already have an account?</lable>
+                    <a class="btn btn-success dropdown-toggle" data-bs-toggle="modal" data-bs-target="#loginModal"
+                        href="#">Login</a>
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-2 col-md-10" id="bloger">
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-5 my-2">
+                <h2 class="featurette-heading fw-normal lh-1">It all started with iCoder's Idea. It'll blow your mind.
+                    <span class="text-body-secondary">It’ll blow your mind.</span>
+                </h2>
+                <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting
+                    prose here.</p>
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid" src="/image/about1.jpg" alt="">
+            </div>
+        </div>
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-5 order-md-2 my-4">
+                <h2 class="featurette-heading fw-normal lh-1">We started iCoder in 2017 It'll blow your mind <span
+                        class="text-body-secondary">It’ll blow your mind.</span></h2>
+                <p class="lead">Some great placeholder content for the first featurette here. Imagine some
+                    exciting prose here.</p>
+            </div>
+            <div class="col-md-4 order-md-1">
+                <img class="img-fluid" src="/image/about2.jpg" alt="">
+            </div>
+        </div>
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-5 my-4">
+                <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
+                        class="text-body-secondary">It’ll blow your mind.</span></h2>
+                <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting
+                    prose here.</p>
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid" src="/image/about3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <footer class="container col-md-12" id="footerabout">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2023 iCoding, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    <!----------------- Optional JavaScript ------------------>
+    <!----------------- JQuery first, then Propper.js, then Bootstrap JS ---------->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
